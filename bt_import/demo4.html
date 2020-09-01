@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>垂直表单（默认表单）</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3 class="text-center">新用户注册</h3>
+            <form>
+                <div class="form-group">
+                    <label for="email">邮箱：</label>
+                    <input type="email" class="form-control" id="email" name="email"placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码：</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                </div>
+                <div class="form-group">
+                    <label for="file">文件上传：</label>
+                    <input type="file" id="file" name="file" >
+                    <p class="help-block">文件必须是jpg</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="level">学历：</label>
+                    <select name="level" id="level" class="form-control">
+                        <option value="0">高中</option>
+                        <option value="1">本科</option>
+                        <option value="2">硕士</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">留言：</label>
+                    <textarea name="comment" id="comment" class="form-control" rows="3" style="resize:none;">
+
+                    </textarea>
+                </div>
+
+                <label>选择课程：</label>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="course[]" value="front" checked>前端
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="course[]" value="server">后端
+                    </label>
+                </div>
+                <div class="checkbox disabled">
+                    <label>
+                        <input type="checkbox" name="course[]" value="full-stack" disabled>全栈
+                    </label>
+                </div>
+
+                <label>选择课程：</label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="course[]" value="front" checked>前端
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="course[]" value="server">后端
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="course[]" value="full-stack" disabled>全栈
+                </label>
+
+                <br>
+                <label>选择性别：</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="gender" checked>男
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="male">女
+                    </label>
+                </div>
+                <div class="radio disabled">
+                    <label>
+                        <input type="radio" name="gender" disabled>待定
+                    </label>
+                </div>
+
+                <label>选择性别：</label>
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="gender" checked>男
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="male">女
+                    </label>
+                </div>
+                <div class="radio-inline disabled">
+                    <label>
+                        <input type="radio" name="gender" disabled>待定
+                    </label>
+                </div>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="name" aria-label="用户名">
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="name" aria-label="性别">
+                    </label>
+                </div>
+
+                <button type="button" class="btn btn-primary">提交注册</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../lib/jquery.js"></script>
+<script src="../lib/dist/js/bootstrap.js"></script>
+
+
+</body>
+</html>

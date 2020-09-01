@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>巨幕的设置方式与使用场景实战</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="padding:0px;">
+
+                <!--导航条的基类：navbar作为一个主容器，支持一些修饰类作为主题：navbar-default,navbar-inverse(反色导航)-->
+                <nav class="navbar navbar-default navbar-inverse" style="padding:0px;margin:0;border-radius:0px;">
+                    <!--需要向两边把空间撑满-->
+                    <div class="container-fluid  col-sm-10 col-sm-offset-1">
+                        <!--当缩放到手机大小的时候有三个小横线-->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!--<a class="navbar-brand" href="#">Brand</a>-->
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Bootstrap中文网</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Bootstrap3中文网
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">HTML</a></li>
+                                        <li><a href="#">PHP</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">MySQL</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Bootstrap4中文网</a></li>
+                                <li><a href="#">Sass教程</a></li>
+                                <!--<li><a href="#">Less教程</a></li>-->
+                                <li><a href="#">jQuery API</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Bootstrap3中文网
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Web</a></li>
+                                        <li><a href="#">PHP</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">MySQL</a></li>
+                                    </ul>
+                                </li>
+                                <!--<li><a href="#">网站实例</a></li>-->
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">关于</a></li>
+                            </ul>
+
+                            <!--导航条内置的搜索表单：navbar-form-->
+                            <form class="navbar-form navbar-right">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+
+
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <!--<div class="jumbotron" style="background-color:#572C4F;border-radius:0px;">-->
+                <div class="jumbotron" style="background:linear-gradient(#341B44,#401D45);border-radius:0px;">
+                    <h1 style="font-size:100px;color:white;font-weight:bolder;" class="text-center">Bootstrap</h1>
+                    <h2 style="font-size:30px;color:white;" class="text-center">简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</h2>
+                    <button type="button" class="btn btn-primary btn-lg center-block">Bootstrap3中文文档(v3.3.7)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="../lib/jquery.js"></script>
+<script src="../lib/dist/js/bootstrap.js"></script>
+</body>
+</html>

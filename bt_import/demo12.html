@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>下拉菜单</title>
+
+</head>
+<body>
+    <div class="dropdown" style="margin-top:200px;">
+        <button type="button" class="btn btn-default" data-toggle="dropdown">
+            前端开发  <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">常用技术</li>
+            <li class="disabled"><a href="#">HTML5</a></li>
+            <li><a href="#">CSS3</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li class="divider" role="separator"></li>
+            <li><a href="#">vue</a></li>
+            <li><a href="#">Jquery</a></li>
+        </ul>
+    </div>
+
+    <div class="dropup" style="margin-top:100px;">
+        <button type="button" class="btn btn-info" data-toggle="dropdown">
+            后端开发 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-left">
+            <li><a href="#">PHP语言</a></li>
+            <li><a href="#">数据库</a></li>
+            <li><a href="#">Laravel框架</a></li>
+        </ul>
+    </div>
+
+
+
+<script src="../lib/jquery.js"></script>
+<script src="../lib/dist/js/bootstrap.js"></script>
+
+
+</body>
+</html>

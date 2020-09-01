@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>下拉菜单的创建与激活方式</title>
+</head>
+<body>
+    <!--先创建一个下拉菜单容器-->
+    <div class="dropdown"  style="margin-top:200px;">
+        <!--按钮-->
+        <!--aria-haspopup :true表示点击的时候会出现菜单或是浮动元素； false表示没有pop-up效果。-->
+        <!--aria-expanded:表示展开状态。默认为undefined, 表示当前展开状态未知。其它可选值：true表示元素是展开的；false表示元素不是展开的。-->
+        <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            前端开发
+            <span class="caret"></span>
+        </button>
+        <!--其实就相当于aria-label标签-->
+        <!--当想要的标签文本已在其他元素中存在时，可以使用aria-labelledby，并将其值为所有读取的元素的id。-->
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li class="dropdown-header">常用技术</li>
+            <li><a href="">HTML5</a></li>
+            <li><a href="">css3</a></li>
+            <li><a href="">JavaScript</a></li>
+            <!--分隔条-->
+            <li class="divider"></li>
+            <li><a href="">jquery</a></li>
+            <li><a href="">bootstrap</a></li>
+        </ul>
+    </div>
+
+
+    <!--上拉菜单-->
+    <div class="dropup"  style="margin-top:200px;">
+        <!--按钮-->
+        <button type="button" class="btn btn-default" data-toggle="dropdown">
+            前端开发
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="">HTML5</a></li>
+            <li><a href="">css3</a></li>
+            <li><a href="">JavaScript</a></li>
+        </ul>
+    </div>
+
+
+
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/dist/js/bootstrap.js"></script>
+</body>
+</html>

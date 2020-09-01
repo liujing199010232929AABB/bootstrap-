@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--1.导入bootstrap样式文件-->
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>栅格布局</title>
+    <style>
+        .grid{border:1px solid #696969;border-radius:5px;background-color:lightblue;min-height:30px;text-align:center;line-height:50px}
+    </style>
+</head>
+<body>
+    <!--容器类：必须要写，只有加上他，内部元素才能够居中-->
+    <div class="container-fluid" style="padding:0 50px;">
+        <!--container下面第一行代码，必须要添加一个行样式class="row"-->
+
+
+        <!--<div class="row">-->
+            <!--&lt;!&ndash;行里面必须放列&ndash;&gt;-->
+            <!--<div class="col-md-2 grid">-->
+                <!--2column-->
+            <!--</div>-->
+            <!--<div class="col-md-8 grid">-->
+                <!--8column-->
+            <!--</div>-->
+            <!--<div class="col-md-2 grid">-->
+                <!--2column-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+        <!--<div class="row">-->
+            <!--<div class="col-md-6 col-sm-8 col-xs-2 grid">-->
+                <!--6column-->
+            <!--</div>-->
+            <!--<div class="col-md-6 col-sm-4 col-xs-10  grid">-->
+                <!--6column-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="row">
+            <div class="col-md-3 grid">3</div>
+            <div class="col-md-3 grid">3</div>
+            <!--<div class="col-md-3 col-md-offset-3 col-md-pull-1 grid">3</div>-->
+            <div class="col-md-3 grid">3</div>
+            <div class="col-md-3 grid">3</div>
+        </div>
+
+    </div>
+
+    <!--2.导入支持文件：jquery.js-->
+    <script src="../lib/jquery.js"></script>
+    <!--3.导入bootstrap的js文件-->
+    <script src="../lib/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

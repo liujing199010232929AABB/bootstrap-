@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>警告框插件的几种常用场景</title>
+</head>
+<body>
+    <div class="alert alert-success">
+        <!--警告框的插件比组件，多了关闭按钮-->
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p>恭喜你，转账成功</p>
+    </div>
+    <!--使用一个链接当关闭按钮-->
+    <div class="alert alert-warning">
+        <h4>公安提醒：</h4>
+        <a data-dismiss="alert" href="">关闭</a>
+        <p>请转账之前电话确认一下？</p>
+    </div>
+
+    <!--使用按钮当关闭按钮-->
+    <div class="alert alert-danger">
+        <h4>淘宝提醒：</h4>
+        <p>任何提醒中奖都是骗子</p>
+        <button type="button" class="btn btn-primary btn-sm" data-dismiss="alert">朕知道了</button>
+    </div>
+
+    <!--用户自定义事件关闭-->
+    <div class="alert alert-success">
+        <h4>恭喜你入职PHP中文网：</h4>
+        <button type="button" class="btn btn-primary btn-sm" id="close">明白了</button>
+    </div>
+
+
+<script src="../lib/jquery.js"></script>
+<script src="../lib/dist/js/bootstrap.js"></script>
+    <script>
+        $('#close').click(function(){
+            $(this).alert('close');
+        })
+    </script>
+</body>
+</html>

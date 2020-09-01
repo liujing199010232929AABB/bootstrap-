@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>模态框的组成与设置技巧</title>
+</head>
+<body>
+    <!--data-:属性与JavaScript代码绑定，内置API(应用程序接口)-->
+    <!--模态框通过一个按钮来激活，还有通过一个js代码(ajax返回数据)-->
+
+    <!--通过按钮激活模态框的时候一定要与二个data属性配合-->
+    <!--data-toggle:模态框的打开与关闭-->
+    <!--data-target:指出我要弹出的是哪个模态框-->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">打开模态框</button>
+
+    <!--模态框代码：-->
+    <!--而若把tabIndex属性设为一个负值（如tabIndex="-1"），那么这个链接将被排除在TAB键的序列之外。   如果最初选择了[Tab]键，带这个输入栏的网页会将光标移动到firstName栏。-->
+    <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+        <!--创建一个对话框-->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!--模态框头部-->
+                <div class="modal-header">
+
+                    <!--关闭按钮-->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">&times;</button>
+                    <h4 class="modal-title">模态框标题</h4>
+                </div>
+
+                <!--模态框主体-->
+                <div class="modal-body">
+                    <!--模态框的主体代码/表格/图片/视频-->
+                    <div class="row">
+                        <div class="col-md-4">.col-md-4</div>
+                        <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                        <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            Level 1: .col-sm-9
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-6">
+                                    Level 2: .col-xs-8 .col-sm-6
+                                </div>
+                                <div class="col-xs-4 col-sm-6">
+                                    Level 2: .col-xs-4 .col-sm-6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--模态框的底部-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" >关闭</button>
+                    <!--用户自定义功能按钮：确定/保存/提交-->
+                    <button type="button" class="btn btn-primary">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">打开模态框@mdo</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">新闻</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">收件人:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">信息:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">发送信息</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script src="../lib/jquery.js"></script>
+<script src="../lib/dist/js/bootstrap.js"></script>
+
+    <script>
+        $('#myModal').modal({
+            backdrop:true,
+            show:false
+            // keyboard:true
+        });
+
+        // show 方法调用之后立即触发该事件。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的 relatedTarget 属性进行访问。
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var recipient = button.data('whatever');
+
+            var modal = $(this);
+            modal.find('.modal-title').text('新信息给' + recipient);
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+
+</body>
+</html>

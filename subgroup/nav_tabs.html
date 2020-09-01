@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/dist/css/bootstrap.css">
+    <title>常见的标签式和胶囊式导航设置方法</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <!--标签页的导航-->
+            <ul class="nav nav-tabs">
+                <li><a href="">国内新闻</a></li>
+                <li><a href="">国际新闻</a></li>
+                <li  class="active"><a href="">行业新闻</a></li>
+            </ul>
+            <br>
+            <!--胶囊式导航-->
+            <ul class="nav nav-pills">
+                <li class="active"><a href="">国内新闻</a></li>
+                <li><a href="">国际新闻</a></li>
+                <li><a href="">行业新闻</a></li>
+            </ul>
+            <br>
+
+            <!--垂直式胶囊导航-->
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="">国内新闻</a></li>
+                <li><a href="">国际新闻</a></li>
+                <li><a href="">行业新闻</a></li>
+            </ul>
+            <br>
+            <!--添加下拉菜单-->
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        Dropdown
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="">国内新闻</a></li>
+                        <li><a href="">国际新闻</a></li>
+                        <li><a href="">行业新闻</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <br>
+            <!--带下拉菜单的胶囊式标签页-->
+            <ul class="nav nav-pills">
+                <li role="presentation" class="dropdown active">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        时事新闻
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="">国内新闻</a></li>
+                        <li><a href="">国际新闻</a></li>
+                        <li><a href="">行业新闻</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/dist/js/bootstrap.js"></script>
+</body>
+</html>
